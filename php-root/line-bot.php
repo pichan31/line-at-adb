@@ -73,8 +73,6 @@ class BOT_API extends LINEBot {
                 //$str_return .= "TEXT : ".$event['message']['text'].'---'.'ภาษาไทย';
                 //$str_return .= "TEXT : ".$event['message']['text']."\n".'ภาษาไทย';
                 //$str_return .= "\n";
-
-                $content_info = "Id:".$event['source']['userId']."\n"."------------ \n";
                 
                 
                 $url_info ='http://61.90.142.230/iadb/line/LOG_USERID/search.php?po='.$event['message']['text'];
@@ -92,7 +90,7 @@ class BOT_API extends LINEBot {
                 //$str_return .= "TEXT : ".$event['message']['text']."\n".'--------------';
                 //$str_return .= "\n".$content_info;
 
-
+                $content_info .= "\n"."Id:".$event['source']['userId'];
 
                 $str_return .= $content_info."\n URL : https://line-at-adb.herokuapp.com"; // ************************ ECHO ECHO ECHO ***********************************// ******************//
 
