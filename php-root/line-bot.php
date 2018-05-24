@@ -91,7 +91,7 @@ class BOT_API extends LINEBot {
                 //$str_return .= "\n".$content_info;
 
 
-                $str_return .= "ADB https://line-at-adb.herokuapp.com/ \n".$content_info; // ************************ ECHO ECHO ECHO ***********************************// ******************//
+                $str_return .= $content_info."\n URL : https://line-at-adb.herokuapp.com"; // ************************ ECHO ECHO ECHO ***********************************// ******************//
 
                 $this->message    = $str_return;
                 $this->timestamp  = $event['timestamp'];
