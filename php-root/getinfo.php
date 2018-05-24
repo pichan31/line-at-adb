@@ -92,7 +92,7 @@ class BOT_API extends LINEBot {
 
 
 
-                $str_return .= "Id:".$event['source']['userId']."\n"."------------"."\n"."displayName:".$event['source']['displayName']."\n"."------------"."\n".$content_info."\n URL : https://line-at-adb.herokuapp.com"; // ************************ ECHO ECHO ECHO ***********************************// ******************//
+                $str_return .= "Id:".$event['source']['userId']."\n"."------------"."\n".$content_info."\n URL : https://line-at-adb.herokuapp.com"; // ************************ ECHO ECHO ECHO ***********************************// ******************//
 
                 $this->message    = $str_return;
                 $this->timestamp  = $event['timestamp'];
