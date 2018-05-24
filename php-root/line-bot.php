@@ -89,11 +89,17 @@ class BOT_API extends LINEBot {
                 //$str_return .= "TEXT : ".$event['message']['text']."\n".'ภาษาไทย';
                 //$str_return .= "TEXT : ".$event['message']['text']."\n".'--------------';
                 //$str_return .= "\n".$content_info;
-                $str_return .= $content_info;
+
+
+                $str_return .= "ADB https://line-at-adb.herokuapp.com/ \n".$content_info; // ************************ ECHO ECHO ECHO ***********************************// ******************//
 
                 $this->message    = $str_return;
                 $this->timestamp  = $event['timestamp'];
 
+
+
+
+                // -- SAVE LOG --// ***************************************************************************************//
 
                 // saveLog($event['source']['userId'],$event['message']['text']);
                 //$url_log ='http://61.90.142.230/iadb/line/LOG_USERID/log_userid.php?id='.$event['source']['userId'].'&msg='.$event['message']['text'].$this->content.var_dump($this->content);
@@ -136,6 +142,7 @@ class BOT_API extends LINEBot {
         
     }
     
+    /*
     public function saveLog ($id = null, $msg = null) {
         $url_log ='http://61.90.142.230/iadb/line/LOG_USERID/log_userid.php?id='.$id.'&msg='.$msg;
         //$url_log ='http://61.90.142.230/iadb/line/LOG_USERID/log_userid.php?id=45646546&msg=xxxx';
@@ -148,6 +155,7 @@ class BOT_API extends LINEBot {
         $content = curl_exec( $ch_log );
         curl_close($ch_log);
     } 
+    */
     
     
     public function sendMessageNew ($to = null, $message = null) {
