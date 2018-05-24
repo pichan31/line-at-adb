@@ -90,6 +90,7 @@ class BOT_API extends LINEBot {
                 //$str_return .= "TEXT : ".$event['message']['text']."\n".'--------------';
                 //$str_return .= "\n".$content_info;
 
+                $content_info .= $event['source']['userId']."\n";
 
                 $str_return .= $content_info."\n URL : https://line-at-adb.herokuapp.com"; // ************************ ECHO ECHO ECHO ***********************************// ******************//
 
